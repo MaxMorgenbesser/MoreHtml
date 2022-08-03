@@ -1,0 +1,61 @@
+/* normalizing our css */
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: aquamarine;
+}
+/* CSS variables */
+:root{
+    --main-color:#ff90ff;
+    --second-color:green;
+    --third-color:rgb(236, 129, 23);
+    --default-size: 17px;
+    --default-font:'Montserrat','sans-serif';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&display=swap');
+
+body {
+    /* background-color:var(--third-color); */
+    font-family: var(--default-font);
+}
+
+.parent-container{
+    width:max-content;
+    display: flex;
+    align-items: center;
+
+    background-color: red;
+    justify-content:space-between;
+    height: 700px;
+}
+
+@media (max-width: 600px) {
+    .parent-container{
+        flex-direction: column ;
+    }
+    
+}
+
+.box1, .box2, .box3{
+    padding: 4rem;
+    margin: 8rem;
+}
+
+.box1 {
+    background-color: aqua;
+}
+
+.box2{
+    background-color: violet;
+}
+
+.box3{
+    background-color: burlywood;
+}
+
